@@ -86,7 +86,7 @@ nav[class*="privateChannels__"] {
 
         /* Resize unread avatars */
         [class*="listItem_"] {
-            transform: scale(1.2) !important;
+            transform: scale(1.1) !important;
         }
 
         /* Resize server icons */
