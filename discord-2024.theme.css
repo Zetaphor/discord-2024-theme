@@ -1,0 +1,140 @@
+/**
+  * @name Discord 2024 Theme
+  * @version 1.0
+  * @author @Zetaphor
+  * @source https://github.com/Zetaphor/discord-2024-theme
+  * @description Restores discord's 2024 UI
+*/
+
+/* Chat panel */
+[class*="chatContent_"] {
+    background-color: #313338 !important;
+}
+
+/* Channel list */
+#channels {
+    background-color: #2b2d31 !important;
+}
+
+/* Channel list header */
+nav[class*="container_"] {
+    background-color: #2b2d31 !important;
+}
+
+[aria-label="Channel header"] {
+    background-color: #313338 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* Remove the gradient between the channel topic and channel header icons */
+[class*="upperContainer__"] [class*="children__"]::after {
+    background: none !important;
+}
+
+[aria-label="User area"] {
+    width: 100% !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    border-radius: 0 !important;
+    background-color: #232428 !important;
+}
+
+/* DM List */
+
+[class*="sidebarListRounded_"] {
+    border-top-left-radius: 0 !important;
+}
+
+nav[class*="privateChannels__"] {
+    background-color: #2b2d31 !important;
+
+    [class*="scrollerBase__99f8c"] {
+        background-color: #2b2d31 !important;
+    }
+}
+
+[class*="closedFolderIconWrapper__"] {
+    [class*="iconSizeMini_"] {
+        border-radius: 5px !important;
+    }
+}
+
+[aria-label="Search Results"] {
+    background-color: #2b2d31 !important;
+
+    [class*="searchResult__"] {
+        background-color: #313338 !important;
+    }
+}
+
+[aria-label="Servers sidebar"] {
+    background-color: #1e1f22 !important;
+
+    /* Remove the little gap that occurs from resizing the user area */
+    margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--space-xs) - 7px) !important;
+
+    [class*="itemsContainer_"] {
+        [class*="pill_"] {
+            width: 10px !important;
+
+            [class*="item_"] {
+                margin-left: 1px !important;
+                width: 8px !important;
+            }
+        }
+
+        /* Resize unread avatars */
+        [class*="listItem_"] {
+            transform: scale(1.2) !important;
+        }
+
+        /* Resize server icons */
+        [class*="blobContainer_"] {
+            transform: scale(1.1) !important;
+        }
+
+        /* Fix spacing between sidebar icons after resize */
+        div[data-align="stretch"] {
+            gap: 15px !important;
+        }
+    }
+
+    /* Discord icon in server list */
+    [class*="tutorialContainer__"] {
+        transform: scale(1.1);
+        margin-top: 15px;
+        margin-bottom: 10px;
+        
+        [class*="childWrapperNoHoverBg__"] {
+            background-color: #313338 !important;
+            border-radius: 20px;
+        }
+    }
+}
+
+/* Chat input */
+[class*="channelBottomBarArea_"] {
+    [class*="channelTextArea_"] {
+        [class*="scrollableContainer_"] {
+            background-color: #383a40 !important;
+        }
+    }
+}
+
+/* Vencord Better Folders Sidebar Plugin */
+.vc-betterFolders-sidebar-grid {
+    ul[id*="folder-items-"] {
+        gap: 15px !important;
+        height: 100% !important;        
+        padding-top: 10px !important;
+    }    
+
+    ul[id*="folder-items-"] > [class*="listItem__"] {
+        height: 45px !important;
+    }
+
+    [class*="expandedFolderBackground__"] {
+        background-color: #1e1f22 !important;        
+    }
+}
