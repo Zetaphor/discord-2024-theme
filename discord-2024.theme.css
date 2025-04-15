@@ -3,7 +3,7 @@
   * @version 1.0
   * @author @Zetaphor
   * @source https://github.com/Zetaphor/discord-2024-theme
-  * @description Restores discord's 2024 UI
+  * @description Restores Discord's 2024 UI
 */
 
 /* Chat panel */
@@ -41,7 +41,6 @@ nav[class*="container_"] {
 }
 
 /* DM List */
-
 [class*="sidebarListRounded_"] {
     border-top-left-radius: 0 !important;
 }
@@ -74,13 +73,14 @@ nav[class*="privateChannels__"] {
     /* Remove the little gap that occurs from resizing the user area */
     margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--space-xs) - 7px) !important;
 
+    /* Server active/activity indicator */
     [class*="itemsContainer_"] {
         [class*="pill_"] {
-            width: 10px !important;
+            width: 8px !important;
 
             [class*="item_"] {
                 margin-left: 1px !important;
-                width: 8px !important;
+                width: 6px !important;
             }
         }
 
@@ -105,7 +105,7 @@ nav[class*="privateChannels__"] {
         transform: scale(1.1);
         margin-top: 15px;
         margin-bottom: 10px;
-        
+
         [class*="childWrapperNoHoverBg__"] {
             background-color: #313338 !important;
             border-radius: 20px;
@@ -126,15 +126,15 @@ nav[class*="privateChannels__"] {
 .vc-betterFolders-sidebar-grid {
     ul[id*="folder-items-"] {
         gap: 15px !important;
-        height: 100% !important;        
+        height: 100% !important;
         padding-top: 10px !important;
-    }    
+    }
 
-    ul[id*="folder-items-"] > [class*="listItem__"] {
+    ul[id*="folder-items-"]>[class*="listItem__"] {
         height: 45px !important;
     }
 
     [class*="expandedFolderBackground__"] {
-        background-color: #1e1f22 !important;        
+        background-color: #1e1f22 !important;
     }
 }
