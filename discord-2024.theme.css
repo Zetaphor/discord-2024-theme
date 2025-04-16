@@ -1,6 +1,6 @@
 /**
   * @name Discord 2024 Theme
-  * @version 1.2
+  * @version 1.3
   * @author @Zetaphor
   * @source https://github.com/Zetaphor/discord-2024-theme
   * @description Restores discord's 2024 UI
@@ -28,11 +28,23 @@ nav[class*="container_"] {
 }
 
 [aria-label="User area"] {
-    width: 100% !important;
-    left: 0 !important;
+    width: calc(100% - var(--custom-guild-list-width)) !important;
+    position: absolute !important;
+    left: auto !important;
+    right: 0 !important;
     bottom: 0 !important;
     border-radius: 0 !important;
     background-color: #232428 !important;
+}
+
+/* Remove the little gap that occurs from resizing the user area */
+[aria-label="User area"]::after {
+    height: 0 !important;
+}
+
+/* Hide the Download Apps button */
+[class*="listItem_"]:has([aria-label="Download Apps"]) {
+    display: none !important;
 }
 
 /* DM List */
@@ -67,9 +79,7 @@ nav[class*="privateChannels__"] {
 /* Servers sidebar */
 [aria-label="Servers sidebar"] {
     background-color: #1e1f22 !important;
-
-    /* Remove the little gap that occurs from resizing the user area */
-    margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--space-xs) - 7px) !important;
+    height: 100% !important;
 
     /* Server active/activity indicator */
     [class*="itemsContainer_"] {
