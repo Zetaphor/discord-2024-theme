@@ -1,19 +1,14 @@
 /**
   * @name Discord 2024 Theme
-  * @version 1.0
+  * @version 1.2
   * @author @Zetaphor
   * @source https://github.com/Zetaphor/discord-2024-theme
-  * @description Restores Discord's 2024 UI
+  * @description Restores discord's 2024 UI
 */
 
 /* Chat panel */
 [class*="chatContent_"] {
     background-color: #313338 !important;
-}
-
-/* Channel list */
-#channels {
-    background-color: #2b2d31 !important;
 }
 
 /* Channel list header */
@@ -53,12 +48,14 @@ nav[class*="privateChannels__"] {
     }
 }
 
+/* Remove circle mask on the server icons in a folder */
 [class*="closedFolderIconWrapper__"] {
     [class*="iconSizeMini_"] {
         border-radius: 5px !important;
     }
 }
 
+/* Search results */
 [aria-label="Search Results"] {
     background-color: #2b2d31 !important;
 
@@ -67,6 +64,7 @@ nav[class*="privateChannels__"] {
     }
 }
 
+/* Servers sidebar */
 [aria-label="Servers sidebar"] {
     background-color: #1e1f22 !important;
 
@@ -124,16 +122,20 @@ nav[class*="privateChannels__"] {
 
 /* Vencord Better Folders Sidebar Plugin */
 .vc-betterFolders-sidebar-grid {
+
+    /* Folder icon spacing */
     ul[id*="folder-items-"] {
         gap: 15px !important;
         height: 100% !important;
         padding-top: 10px !important;
     }
 
+    /* Folder icon height fix */
     ul[id*="folder-items-"]>[class*="listItem__"] {
         height: 45px !important;
     }
 
+    /* Hide folder background */
     [class*="expandedFolderBackground__"] {
         background-color: #1e1f22 !important;
     }
