@@ -1,6 +1,6 @@
 /**
   * @name Discord 2024 Theme
-  * @version 1.3
+  * @version 1.4
   * @author @Zetaphor
   * @source https://github.com/Zetaphor/discord-2024-theme
   * @description Restores discord's 2024 UI
@@ -45,6 +45,18 @@ nav[class*="container_"] {
 /* Hide the Download Apps button */
 [class*="listItem_"]:has([aria-label="Download Apps"]) {
     display: none !important;
+}
+
+/* Background for channel member list item */
+:root {
+    --custom-channel-members-bg: #2b2d31 !important;
+}
+
+/* Channel member list */
+aside[class*="membersWrap_"] {
+    div[class*="members_"] {
+        background-color: #2b2d31 !important;
+    }
 }
 
 /* DM List */
