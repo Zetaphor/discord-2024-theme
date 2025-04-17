@@ -1,6 +1,6 @@
 /**
   * @name Discord 2024 Theme
-  * @version 1.5
+  * @version 1.6
   * @author @Zetaphor
   * @source https://github.com/Zetaphor/discord-2024-theme
   * @description Restores discord's 2024 UI
@@ -38,9 +38,10 @@ nav[class*="container_"] {
 }
 
 /* Remove the little gap that occurs from resizing the user area */
-[aria-label="User area"]::after {
+[class*="sidebar_"]:after {
     height: 0 !important;
 }
+
 
 /* Hide the Download Apps button */
 [class*="listItem_"]:has([aria-label="Download Apps"]) {
